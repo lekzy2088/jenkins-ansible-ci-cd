@@ -22,7 +22,7 @@ pipeline{
 
       stage('Checkout SCM') {
          steps{
-            git branch: 'main', url: 'https://github.com/Livingstone95/project-14.git'
+            git branch: 'main', url: 'https://github.com/lekzy2088/jenkins-ansible-ci-cd.git'
          }
        }
       stage('Prepare Ansible For Execution') {
@@ -38,10 +38,6 @@ pipeline{
         }
       }
 
-      stage('Clean Workspace after build'){
-        steps{
-          cleanWs()
-        }
-      }
+     
    }
 }
